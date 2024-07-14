@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+       *{
+        padding: 0px;
+        margin: 0px;
+        border:none;
+        }
+        .menu{
+            background-color: #ddd;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .itemMenu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #127;
+            color:#fff;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+
+        .submenu{
+            display: none;
+            border:1px solid #087ad8;
+            width: 100%;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+        .itemSubMenu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 20px;
+            margin:10px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: capitalize;
+            cursor: pointer;
+            box-sizing: border-box; 
+            background-color: rgb(29, 100, 233);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu" class="menu">
+        <div id="home" class="itemMenu">Home</div>
+        <div id="jquery" class="itemMenu">Jquery</div>
+        <div class="itemMenu">Carvas</div>
+        <div class="itemMenu">Python</div>
+        <div class="itemMenu">Arduino</div>
+    </div>
+    <div id="submenu_home" class="submenu">
+        <div class="itemSubMenu">Aulas Home</div>
+        <div class="itemSubMenu">Material Home</div>
+    </div>
+    <div id="submenu_jquery" class="submenu">
+        <div class="itemSubMenu">Aulas jQuery</div>
+        <div class="itemSubMenu">Material jQuery</div>
+    </div>
+    <div id="submenu_canvas" class="submenu">
+        <div class="itemSubMenu">Aulas canvas</div>
+        <div class="itemSubMenu">Material canvas</div>
+    </div>
+
+    <div id="submenu_python" class="submenu">
+        <div class="itemSubMenu">Aulas canvas</div>
+        <div class="itemSubMenu">Material canvas</div>
+    </div>
+    <div id="submenu_arduino" class="submenu">
+        <div class="itemSubMenu">Aulas canvas</div>
+        <div class="itemSubMenu">Material canvas</div>
+    </div>
+</body>
+
+<script>
+
+$('#home').click(
+    function (params) {
+        $('#submenu_home').fadeToggle();
+        $('#submenu_home').css('display','flex');
+    }
+)
+    
+$('#jquery').click(
+    function (params) {
+        $('#submenu_jquery').fadeToggle();
+        $('#submenu_jquery').css('display','flex');
+    }
+)
+
+
+</script>
+
+</html>

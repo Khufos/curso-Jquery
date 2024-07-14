@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+     .caixa{
+        border:1px solid #000; 
+        width: 200px; 
+        height: 200px;
+        background-color: rgb(141, 137, 137);
+        position: absolute;
+        left: 0px;
+        top: 50px;
+     }
+   
+    </style>
+
+</head>
+
+<body>
+    <div  id="caixa" class="caixa" >
+        <h3>CFB Cursos</h3>
+        <p>Curso de jquery</p>
+    </div> 
+    <button id="btn_aumentar">Aumentar</button>
+    <button id="btn_diminuir">Diminuir</button>
+    <button id="btn_esquerda">Esquerda</button>
+    <button id="btn_direita">Direita</button>
+    <!-- <button id="esconder">esconder</button> -->
+</body>
+
+<script>    
+
+ $('#btn_aumentar').click(
+    function (param) {
+
+        $('#caixa').animate({width:"500px",height:"500px"},{duration:3000})
+      }
+  
+ )
+ $('#btn_diminuir').click(
+    function (param) {
+
+        $('#caixa').animate({width:"200px"},{duration:2000}).animate({height:"100px"},{duration:2000})
+      }
+  
+ )
+
+ $('#btn_esquerda').click(function () {
+    $('#caixa').animate({left: "100px"}, {duration: 200}); // Mover para a esquerda
+ });
+
+
+ $('#btn_direita').click(
+    function (param) {
+
+        $('#caixa').animate({left:"500px"},{duration:200,complete:()=>{
+            alert('movimentando');
+        }});
+      }
+  
+ )
+</script>
+
+</html>

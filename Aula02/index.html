@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="calc">
+      <label for="">Valor 1</label>
+      <input type="text" id="v1" value="0" />
+      <br /><br />
+      <label for="">valor 2</label>
+      <input type="text" id="v2" value="0" />
+      <br /><br />
+      <label for="">Resultado</label>
+      <input type="text" id="res" value="0" />
+      <br /><br />
+      <button id="btn_somarjs">Somar Javascript</button>
+      <button id="btn_somarjq">Somar jquery</button>
+    </div>
+
+
+
+    <script>
+        // soma feita com javascript puro usando função anonima;
+        let btn_somarjs = document.getElementById("btn_somarjs").addEventListener("click",()=>{
+            let v1 = document.getElementById("v1").value;
+            let v2 = document.getElementById("v2").value;
+            let soma = parseInt(v1)+parseInt(v2);
+            let res = document.getElementById("res").value = soma;  
+        })
+    </script>
+
+    <script>
+        // soma feita com a biblioteca chamada jquery
+        $("#btn_somarjq").click(()=>{
+            let v1 = parseInt($("#v1").val());
+            let v2= parseInt($("#v2").val());
+            let soma = v1+v2;
+            $("#res").val(soma);
+        })
+
+    </script>
+ 
+
+
+</body>
+  
+</html>

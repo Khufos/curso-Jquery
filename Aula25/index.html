@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+       *{
+        padding: 0px;
+        margin: 0px;
+        border:none;
+        }
+        .menu{
+            background-color: #ddd;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .itemMenu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #127;
+            color:#fff;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu" class="menu">
+        <div id="home" class="itemMenu">Home</div>
+        <div id="jquery" class="itemMenu">Jquery</div>
+        <div class="itemMenu">Carvas</div>
+        <div class="itemMenu">Python</div>
+        <div class="itemMenu">Arduino</div>
+    </div>
+    
+
+</body>
+
+<script>
+ $('#home').click(
+    function(){
+        $(this).fadeTo('slow',0.5);
+    }
+ )
+
+    $('#jquery').mouseover(
+        function(){
+            $(this).fadeTo('slow',0.5);
+        }
+    )
+
+    $('#jquery').mouseleave(
+        function(){
+            $(this).fadeTo('slow',1);
+        }
+    )
+
+
+
+
+
+</script>
+
+</html>

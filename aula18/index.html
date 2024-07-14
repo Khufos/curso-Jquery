@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+  
+    </style>
+
+</head>
+
+<body>
+    <div id="caixa">
+        <h2>CFB Cursossss</h2>
+        <p>Cursos de jquery</p>
+    </div>
+    <div id="caixa2">
+        <h2>CFB Cursossss</h2>
+        <p>Cursos de jquery</p>
+    </div>
+    <h2>Curso de jquery</h2>
+    <input type="text" id="nome"/>
+</body>
+
+<script>    
+
+// recuperando conteudo texto da div
+$('#caixa').click(
+        function () {
+            alert("Texto: " + $(this).text());
+          }
+    )
+// recuperando conteudo HTML da div
+    $('#caixa2').click(
+        function () {
+            alert("Texto: " + $(this).html());
+          }
+    )
+//    $('h2').click(()=>{
+//     $('#nome').val($('#caixa').text());
+//    })
+
+    // $('h2').click(
+    //     function () {
+    //         alert("Texto:" + $(this).text());
+    //       }
+    // )
+
+
+    // $('#caixa').click(
+    //     function () {
+    //         alert("Texto: " + $(this).text());
+    //       }
+    // )
+   
+    // $('#nome').click(
+    //     function () {
+    //         alert("Texto: " + $(this).val());
+    //       }
+    // )
+ 
+   
+</script>
+
+</html>

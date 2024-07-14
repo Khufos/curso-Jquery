@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title> toArray em jQuery </title>
+    <style>
+        .caixa {
+            background-color: #ff0;
+            padding: 10px;
+            border: 3px solid #f00;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="caixa1" class="caixa">
+
+        <h4 id="h4_1">CFB Cursoss PDF</h4>
+        <h4 id="h4_2">CFB Cursos </h4>
+        <h4 id="h4_3">Curso de jQuery</h4>
+        <h4 id="h4_4">Função each()</h4>
+        <h4 id="h4_5">cfbcursos.com.br</h4>
+        <h4 id="h5_6">youtube.com/cfcursos</h4>
+
+    </div>
+
+
+    <div id="caixa2" class="caixa">
+
+        <p id="p_1">CFB Cursos</p>
+        <p id="p_2">Curso de jQuery</p>
+        <p id="p_3">Função each()</p>
+        <p id="p_4">cfbcursos.com.br</p>
+        <p id="p_5">youtube.com/cfcursos</p>
+
+    </div>
+
+
+
+    <button id="p_para_caixa2">Transformando em um array P</button>
+    <button id="h4_para_caixa2">Transformando em um array H4</button>
+</body>
+
+<script>
+    let elemento_p = $("p").toArray();
+    let elemento_h = $("h4").toArray();
+    console.log(elemento_p);
+    console.log(elemento_h);
+    console.log($("p"));
+    console.log($("h4"));
+    $("#p_para_caixa2").click(() => {
+
+        $("#caixa2").append(elemento_p)
+        $("#caixa1").append(elemento_h)
+    })
+
+
+    $("#h4_para_caixa2").click(() => {
+
+        $("#caixa2").append(elemento_h)
+        $("#caixa1").append(elemento_p)
+    })
+</script>
+
+</html>

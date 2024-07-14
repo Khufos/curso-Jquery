@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+     
+    </style>
+
+</head>
+<body>
+    
+  <p id="texto1">CFB Cursos</p>
+   <br/>
+   <p id="resultado"></p>
+   <script>
+    $(document).on({
+            click:()=>{$('#texto1').text(event.type + ": " + event.which)},
+            keydown:()=>{$('#texto1').text(event.type + ": " + event.which)
+
+            if(event.which == 13){
+              alert("dasdadasd");
+            }
+
+            }
+           
+    })
+
+    
+   </script>
+</body>
+
+
+
+</html>

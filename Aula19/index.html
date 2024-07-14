@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+     .vermelho{
+        border:1px solid #000; 
+        width: 200px; 
+        height: 200px;
+        background-color: red;
+     }
+     .azul{
+        border:1px solid #000; 
+        width: 200px; 
+        height: 200px;
+        background-color: rgb(14, 88, 226);
+     }
+    </style>
+
+</head>
+
+<body>
+    <div  id="caixa_modificar" class="vermelho" style="border:1px solid #000; width: 200px; height: 200px;">
+        <h3>CFB Cursos</h3>
+        <p>Curso de jquery</p>
+    </div> 
+    <button id="v">Vermelho</button>
+    <button id="b">Azul</button>
+</body>
+
+<script>    
+
+// aqui ele pega o id da div
+// $('.adc').click(
+//     function () { 
+//         alert($(this).attr('id'));
+//      }
+
+// )
+ // aqui ele pega o style 
+$('#v').click(
+    function () { 
+        $('#caixa_modificar').attr('class', 'vermelho')
+     }
+
+)
+
+$('#b').click(
+    function () { 
+        $('#caixa_modificar').attr('class', 'azul')
+     }
+
+)
+ 
+ 
+   
+</script>
+
+</html>

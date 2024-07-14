@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title> toArray em jQuery </title>
+    <style>
+        .caixa {
+            background-color: #ddd;
+            width: 200px;
+            height: 250px;
+            padding: 10px;
+            border:5px solid #000;
+            margin: 5px ;
+        }
+
+     
+    </style>
+</head>
+
+<body>
+   <div style="display: flex;">
+    <div id="caixa1" class="caixa">
+        CFB Cursos
+
+    </div>
+    <div id="info" class="caixa"></div>
+            <img src="\img\foto.webp" width="550px" />
+   </div>
+
+   <button id="btn_altera">Alterar</button>
+</body>
+
+<script>
+    let cx=$("#caixa1") 
+ $("#info").html(
+    "CAIXA INFO :  <br/>"+" <br/>Width: " + cx.width()+"px" + " <br/> Heigth:" + cx.height() +"px </br>"
+    + " <br/> innerwidth:"+ cx.innerWidth()+"px" +  "<br/>innerHeight:" + cx.innerHeight() +"px </br>"   
+    + " <br/> Outerwidth:"+ cx.outerWidth()+"px" +  "<br/>OuterHeight:" + cx.outerHeight() +"px" 
+    + " <br/> Outerwidth(true):"+ cx.outerWidth(true)+"px" +  "<br/>OuterHeight(true):" + cx.outerHeight(true) +"px" 
+ )
+
+ $("#btn_alt").click(()=>{
+    cx.width(300);
+    cx.height(300)
+ })
+</script>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+      
+    </style>
+
+</head>
+
+<body>
+    <div>
+       <ul>
+        <li >
+            <h3>CFB Cursos</h3>
+            <span> Curso de JQuery</span>
+            <p>Seletores parent</p>
+        </li>
+       </ul>
+    </div>
+    <script>
+        // o parent pega o pai que está acima dele .
+        // $('p').parent().css({'border':'1px solid #f00'})
+        // $('li').parent().css({'border':'1px solid #00f'})
+        // $('ul').parent().css({'border':'1px solid #0f0'})
+        // $('div').parent().css({'border':'1px solid #ff0'})
+        // $('body').parent().css({'border':'1px solid #f0f'})
+        
+        // o parents pega todos os elementos que estão acima dele e modificar.
+        // $('p').parents().css({'border':'1px solid #f00'})
+
+        //Aponte para um determinado elemente pai até que eu quero.
+        $('p').parentsUntil('div').css({'border':'1px solid #f00'})
+      
+    </script>
+</body>
+
+
+
+</html>

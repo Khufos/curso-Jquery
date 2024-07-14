@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+       .cor{
+        color: red;
+       }
+       .menu{
+         display: flex;
+         flex-direction: column;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <button id="bt_rolar_left">Rolar left</button>
+        <button id="bt_rolar_top">Rolar top</button>
+        <button id="bt_pos_left">Posição left </button>
+        <button id="bt_pos_top">Posição top</button>
+        <button id="bt_reset_pos">Resetar Posição</button>
+
+    </div>
+
+    <div id="texto" style="border:1px solid #000; width: 100px; height: 150px; overflow: auto;">
+        CFB Cursos, Cursos de Jquery, não deixe de conferir nosso site e baixe todas apostilas gratuitas,configura também
+        CFB Cursos, Cursos de Jquery, não deixe de conferir nosso site e baixe todas apostilas gratuitas,configura também
+        CFB Cursos, Cursos de Jquery, não deixe de conferir nosso site e baixe todas apostilas gratuitas,configura também
+    </div>
+</body>
+
+<script>
+    $("#bt_rolar_left").click(()=>{
+        $("#texto").scrollLeft(15);
+    })
+    $("#bt_rolar_top").click(()=>{
+        $("#texto").scrollTop(150);
+    })
+
+    $("#bt_pos_left").click(()=>{
+        alert($("#texto").scrollLeft());
+    })
+    // aqui está pegando o valor do top
+    $("#bt_pos_top").click(()=>{
+        alert($("#texto").scrollTop());
+    })
+    $("#bt_reset_pos").click(()=>{
+        $("#texto").scrollTop(0).scrollLeft(0);
+    })
+
+</script>
+
+</html>

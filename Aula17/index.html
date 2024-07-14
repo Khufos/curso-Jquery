@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+      p{
+        background-color: rgb(223, 219, 32);
+      }
+      h3{
+        background-color: rgb(12, 167, 46);
+      }
+      .borda{
+        border: 1px solid #f00;
+      }
+    </style>
+
+</head>
+
+<body>
+ <p class="borda">CFB Cursos</p>
+ <h3>CFB Cursos</h3>
+
+ <p>CFB de Canvas</p>
+ <h3>Curso de canvas</h3>
+
+ <p class="borda">youtube.com/cfbcursos</p>
+ <h3>youtube.com/cfbcursos</h3>
+
+ <p>www.cfbcursos.com.br</p>
+ <h3>www.cfbcursos.com.br</h3> 
+
+ <p>Filtrando elementos</p>
+ <h3>Filtrando elementos</h3>
+
+</body>
+
+<script>
+    // filter pega todos que estão com classe border e aplica o css  color
+    $('p').filter('.borda').css({'color':'#00FFFF'})
+
+    // not faz ao contrario , pega todos os p que estão sem classe borda e coloca um color neles 
+    $('h3').not('.borda').css({'color':'#00FF7F'})
+</script>
+
+</html>

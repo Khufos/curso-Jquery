@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        .caixa {
+            background-color: #ddd;
+            border: 1px solid #000;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            margin-right: 10px;
+
+        }
+
+        .cor {
+            color: red;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <button id="btn_replace1">Replace All 1</button>
+        <button id="btn_replace2">Replace 2</button>
+        <button id="btn_replace3">Replace 3 </button>
+        <button id="btn_replace4">Replace 4 </button>
+
+    </div>
+
+    <div>
+        <h1 class="cor">Cfb Cursos</h1>
+        <h1 class="cor">Curso de Jquery</h1>
+        <h2 class="cor">replace All</h2>
+        <h3 class="cor">replaceWith</h3>
+
+    </div>
+</body>
+
+<script>
+    $("#btn_replace1").click(() => {
+        $("<p>trocado</p>").replaceAll(".cor");
+    })
+    $("#btn_replace2").click((e) => {
+        $("<div>" +$(e.currentTarget).text()+ "</div>").replaceAll(e.currentTarget);
+    })
+
+    $("#btn_replace3").click((e) => {
+        $(".cor").replaceWith("<p>trocador</p>");
+    })
+
+    $("#btn_replace4").click((e) => {
+        $(e.currentTarget).replaceWith("<div>" +$(e.currentTarget).text()+ "</div>");
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        .caixa {
+            background-color: #f00;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0px;
+            top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <button id="btnAnimar">Animar</button>
+        <button id="btnProxima">Próxima</button>
+        <button id="btnParar">Parar</button>
+        <button id="btnFim">Fim</button>
+    </p>
+    <div id="caixa" class="caixa"></div>
+</body>
+
+<script>
+    $('#btnAnimar').click(function (param) {
+        $('#caixa').animate({left:800},{duration:2000})
+        $('#caixa').animate({top:400},{duration:2000})
+        $('#caixa').animate({left:0},{duration:2000})
+        $('#caixa').animate({top:200},{duration:2000})
+
+    })
+    $('#btnProxima').click(function (param) {
+        $('#caixa').stop()
+
+    })
+    $('#btnParar').click(function (param) {
+        $('#caixa').stop(true,false);
+        //ClearQueue limpar fila
+        //jumpToEnd : pular pro fim 
+        //JQuery.stop(clearQueue?: boolean | undefined, jumpToEnd?: boolean | undefined): JQuery (+1 overload)
+    })
+    $('#btnFim').click(function (param) {
+
+        $('#caixa').stop(false,true);
+    })
+
+</script>
+
+</html>

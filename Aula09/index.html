@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+     
+    </style>
+
+</head>
+<body>
+    <div id="texto1"> CBF Cursos</div>
+   <br/>
+   <p id="texto2">Curso de jquery</p>
+   <br/>
+   <p id="resultado"></p>
+   <p id="obj"></p>
+   <br/>
+  
+   <script>
+
+    $(document).click((event)=>{
+        $('#resultado').text("Objeto clicado : " + event.target.id);
+        if(event.target.id == "resultado"){
+        alert("Você clicou no id Resultado.");
+    }
+    })
+   
+    // $('#texto1').click(function (event) {
+    //    $('#resultado').text("X:" + event.pageX + ", Y:"+ event.pageY);  
+    //    $('#obj').text("Objeto que foi clicado:" + event.target.nodeName);  
+       
+    //   })
+    
+   
+   </script>
+</body>
+
+
+
+</html>

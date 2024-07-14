@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title>Função length em jQuery</title>
+    <style>
+    .caixa{
+        background-color: #ff0;
+        padding: 10px;
+        border:3px solid #f00;
+        border-radius:5px;
+        margin-top:10px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="caixa" class="caixa">
+
+        <p id="p1">CFB Cursos</p>
+        <p id="p1">CFB Cursos</p>
+        <h4 id="p2">Curso de jQuery</h4>
+        <p id="p3">Função each()</p>
+        <p id="p4">cfbcursos.com.br</p>
+        <p id="p5">youtube.com/cfcursos</p>
+
+    </div>
+
+    <p id="p1">CFB Cursos</p>
+    <p id="p2">Curso de jQuery</p>
+    <h4 id="p3">Função index()</h4>
+    <p id="p4">cfbcursos.com.br</p>
+    <p id="p5">youtube.com/cfcursos</p>
+    <p></p>
+
+    <button id="btn_p">Quantidade de P</button>
+    <button id="btn_h4">Quantidade de h4</button>
+</body>
+
+<script>
+
+  $("#btn_p").click(()=>{
+        alert($("p").length)
+  })
+
+  $("#btn_h4").click(()=>{
+    alert($("h4").length)
+})
+</script> 
+
+</html> 

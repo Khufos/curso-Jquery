@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jqueryGlobal/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+      
+    </style>
+
+</head>
+
+<body>
+   <div>
+    <ul>
+        <li>CBF Cursos</li>
+        <li>Cursos de JQuery</li>
+        <li>Seletores parent</li>
+    </ul>
+    <ul>
+        <li>CBF Cursos</li>
+        <li>Cursos de JQuery</li>
+        <li>Seletores parent</li>
+    </ul>
+   </div>
+</body>
+
+<script>
+    // aponta para filhos do componentes html exemplo: div -> ul - > li 
+    //$('ul').children().css({'border':'1px solid #f00'})
+    // find usado para encontrar elementos ul
+    $('div').find('li:first').css({'border':'1px solid #f00'})
+    $('div').find('li:last').css({'border':'1px solid #f00'})
+    $('div').find('*').css({'border':'1px solid #f00'})
+    $('html').find('*').css({'border':'1px solid #f00'})
+
+
+</script>
+
+</html>
